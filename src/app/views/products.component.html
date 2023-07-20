@@ -1,2 +1,15 @@
 <h3>Lista de Productos</h3>
 <hr>
+
+<div *ngIf="products">
+    <ul>
+        <li *ngFor="let product of products">
+            <strong>{{product.name}}
+            {{product.description}}
+            {{product.price}}
+            {{product.image}}</strong>
+            <br>
+            <br>
+        </li>
+    </ul>
+</div>

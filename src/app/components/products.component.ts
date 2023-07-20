@@ -10,7 +10,7 @@ import { Product } from '../models/product';
 })
 export class ProductsComponent{
     public titulo:string;
-    public productos:Product[] = [];
+    public products:Product[] = [];
 
     constructor(
         private _route: ActivatedRoute,
@@ -24,7 +24,18 @@ export class ProductsComponent{
         console.log('se ha cargado el componente Products');
         this._productService.getProducts().subscribe(
             result => {
-                console.log(result);
+                //console.log(result);
+                this.products = <Product[]>result; //result.data;
+
+                // if(result.code != 200)
+                // {
+                     console.log(result);
+                     console.log(this.products);
+                // }
+                // else
+                // {
+                //     this.products = result.data;
+                // }
             },
             error => {
                 console.log(<any>error);
