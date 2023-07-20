@@ -1,7 +1,10 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
-import { AppRoutingModule } from './app-routing.module';
+//import { AppRoutingModule } from './app-routing.module';
+
+// //Rutas
+ import { routing, appRoutingProviders} from './app-routing.module';
 
 //Components
 import { AppComponent } from './app.component';
@@ -14,9 +17,10 @@ import { HomeComponent } from './components/home.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    //AppRoutingModule
+    routing,     
   ],
-  providers: [],
-  bootstrap: [AppComponent]
+  providers: [appRoutingProviders],
+  bootstrap: [AppComponent, HomeComponent]
 })
 export class AppModule { }
