@@ -72,3 +72,12 @@ margin-right: 20px;
     background: #E03137 !important;
     border-bottom: 3px solid yellow;
  }
+
+ #formProduct{
+    margin-top: 10px;
+ }
+
+ .label{
+    font-weight: bolder;
+ }
+

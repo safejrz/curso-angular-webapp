@@ -6,11 +6,13 @@ import { RouterModule, Routes } from '@angular/router';
 import { HomeComponent } from './components/home.component';
 import { ErrorComponent } from './components/error.component';
 import { ProductsComponent } from './components/products.component';
+import { AddProductsComponent } from './components/addproducts.component';
 
 const routes: Routes = [
   {path:'', component: HomeComponent},
   {path:'home', component: HomeComponent},
   {path:'products', component: ProductsComponent},
+  {path:'addproducts', component: AddProductsComponent},
   {path:'**', component: ErrorComponent},
 ];
 
