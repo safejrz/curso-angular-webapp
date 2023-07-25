@@ -40,11 +40,10 @@ export class ProductService{
         headers: new HttpHeaders({ 'Content-Type': 'application/json' })
       };
       
-      return this._http.post(this.url, json, httpOptions)///{headers: headers})
-                      //.map((res: { json: () => any; }) => res.json());
-                      //map is obsolete since version 6
-                      .pipe(map((response: any) => response.json())).subscribe(result => {
-                        console.log(result);
-                      });                      
+      return this._http.post(this.url, json, httpOptions)
+                      .subscribe(result => {
+                          console.log(result);                        
+                        }
+                      );
     }
 }    
