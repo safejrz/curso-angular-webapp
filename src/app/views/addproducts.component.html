@@ -18,8 +18,8 @@
     <input #price="ngModel" name="price" [(ngModel)]="product.price" type="text" class="form-control" required/>
 
     <label class="label">Input</label>
-    <input type="file" class="form-control"/>
+    <input type="file" class="form-control" (change)="fileChangeEvent($event)"/>
     <br>
-
+    
     <input type="submit" value="{{titulo}}" [disabled]="!formProducto.valid" class="btn btn-success">
 </form>

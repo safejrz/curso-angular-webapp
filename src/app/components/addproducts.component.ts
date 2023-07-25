@@ -35,6 +35,13 @@ export class AddProductsComponent{
             this.product.price,
             this.product.image)
         console.log(newProduct)
-        this._productService.addProduct(newProduct)
+        this._productService.addProduct(newProduct)            
+    }
+
+    // public filesToUpload;
+    // public resultUpLoad;
+
+    fileChangeEvent(fileInput:any){
+        //this.filesToUpload = <Array<File>>fileInput.target.files;
     }
 }
