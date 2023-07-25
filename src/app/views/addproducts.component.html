@@ -2,18 +2,24 @@
 <hr>
 
 <form #formProducto="ngForm" (ngSubmit)="onSubmit();" class="col-lg-6" id="formProduct">
-    <label class="label">Nombre</label>    
-    <input type="text" #name="ngModel" name="name" [(ngModel)]="product.name" class="form-control"/>
+    <label class="label">Nombre
+        <span *ngIf="name.touched && !name.valid" class="label-danger">El nombre es obligatorio</span>
+    </label>    
+    <input type="text" #name="ngModel" name="name" [(ngModel)]="product.name" class="form-control" required/>
 
-    <label class="label">Description</label>
-    <textarea #description="ngModel" name="description" [(ngModel)]="product.description" class="form-control"></textarea>
+    <label class="label">Description
+        <span *ngIf="description.touched && !description.valid" class="label-danger">La descripcion es obligatoria</span>
+    </label>
+    <textarea #description="ngModel" name="description" [(ngModel)]="product.description" class="form-control" required></textarea>
 
-    <label class="label">Precio</label>
-    <input #precio="ngModel" name="price" [(ngModel)]="product.price"  type="text" class="form-control"/>
+    <label class="label">Precio
+        <span *ngIf="price.touched && !price.valid" class="label-danger">el precio debe ser mayor a 0.00</span>
+    </label>
+    <input #price="ngModel" name="price" [(ngModel)]="product.price" type="text" class="form-control" required/>
 
     <label class="label">Input</label>
     <input type="file" class="form-control"/>
     <br>
 
-    <input type="submit" value="{{titulo}}" class="btn btn-success">
+    <input type="submit" value="{{titulo}}" [disabled]="!formProducto.valid" class="btn btn-success">
 </form>

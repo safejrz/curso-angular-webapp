@@ -3,8 +3,6 @@ import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule  } from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
-//import { AppRoutingModule } from './app-routing.module';
-
 // //Rutas
  import { routing, appRoutingProviders} from './app-routing.module';
 
@@ -25,8 +23,7 @@ import { AddProductsComponent } from './components/addproducts.component';
     BrowserModule,   
     HttpClientModule, 
     FormsModule,
-    ReactiveFormsModule,   
-    //AppRoutingModule
+    ReactiveFormsModule,
     routing,     
   ],
   providers: [appRoutingProviders],

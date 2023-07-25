@@ -23,25 +23,13 @@ export class ProductsComponent{
     ngOnInit(){
         console.log('se ha cargado el componente Products');
         this._productService.getProducts().subscribe(
-            result => {
-                //console.log(result);
-                this.products = <Product[]>result; //result.data;
-
-                // if(result.code != 200)
-                // {
-                     console.log(result);
+            result => {                
+                this.products = <Product[]>result; //result.data;                
                      console.log(this.products);
-                // }
-                // else
-                // {
-                //     this.products = result.data;
-                // }
             },
             error => {
                 console.log(<any>error);
-            }
-             //this.property = arg);
+            }             
         )
-        //alert(this._productService.getProducts());        
     }
 }

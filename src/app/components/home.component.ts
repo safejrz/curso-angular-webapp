@@ -6,9 +6,7 @@ import {Component} from '@angular/core';
 })
 export class HomeComponent{
     public titulo:string;
-    /**
-     *
-     */
+
     constructor() {
 this.titulo = 'Web app de productos';
     }
