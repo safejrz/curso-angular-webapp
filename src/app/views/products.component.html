@@ -2,14 +2,25 @@
 <hr>
 
 <div *ngIf="products">
-    <ul>
-        <li *ngFor="let product of products">
-            <strong>{{product.name}}
+    <ul class="product-display">
+        <li *ngFor="let product of products">            
+        <img src="{{product.image}}"  />
+        <br>
+        <strong>{{product.name}}
             {{product.description}}
-            {{product.price}}
-            {{product.image}}</strong>
+        </strong>
+            ${{product.price}}            
             <br>
             <br>
+            
+            <a href="/productdetails" class="btn btn-lg btn-primary">Details</a>
+            <a href="/productedit" class="btn btn-lg btn-lg">Edit</a>
+            <a href="#" class="btn btn-lg btn-error">Delete</a>            
         </li>
     </ul>
 </div>
+
+<home 
+    [property1]="dato_externo"
+    [property2]="'valor 2'"
+    ></home>

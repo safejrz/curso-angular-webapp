@@ -12,6 +12,9 @@ import { Product, NewProduct } from '../models/product';
 export class AddProductsComponent{
     public titulo:string;
     public product:Product;
+    public filesToUpload: File[] = [];
+    public resultUpLoad: boolean = false;
+
 
     constructor(
         private _route: ActivatedRoute,
@@ -35,13 +38,12 @@ export class AddProductsComponent{
             this.product.price,
             this.product.image)
         console.log(newProduct)
-        this._productService.addProduct(newProduct)            
+        this._productService.addProduct(newProduct)
+
+        this.resultUpLoad = true; //this.result;
     }
 
-    // public filesToUpload;
-    // public resultUpLoad;
-
     fileChangeEvent(fileInput:any){
-        //this.filesToUpload = <Array<File>>fileInput.target.files;
+        this.filesToUpload = <Array<File>>fileInput.target.files;
     }
 }

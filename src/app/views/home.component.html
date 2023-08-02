@@ -1,10 +1,22 @@
+<h4 class="title" style="display: none;">{{title}}</h4>
+
+<ul>
+    <li>{{property1}}</li>
+    <li>{{property2}}</li>
+    <!-- <li>{{'hyamom'}}</li> -->
+</ul>
+
 <div class="col-lg-8 col-lg-offset-2">
     <div class="jumbotron">
-        <h2>{{titulo}}</h2>
+        <!-- <h2>{{titulo}}</h2> -->
         <p>Gestiona tus productos con la app SPA</p>
         <p>
-            <a href="/home" class="btn btn-lg btn-primary">Ver Productos</a>
-            <a href="/home" class="btn btn-lg btn-success">Agregar Productos</a>
+            <a href="/products" class="btn btn-lg btn-primary">Ver Productos</a>
+            <a href="/addproducts" class="btn btn-lg btn-success">Agregar Productos</a>
         </p>
     </div>
 </div>
+
+<button (click)="toggleTitle()">Mostrar Titulo</button>
+
+

@@ -11,6 +11,12 @@ import { Product } from '../models/product';
 export class ProductsComponent{
     public titulo:string;
     public products:Product[] = [];
+    public dato_externo = "Victor Robles";
+    public identity = {
+        id:1,
+        web:'yolomcswagger.com',
+        tematica:'qti'
+    };
 
     constructor(
         private _route: ActivatedRoute,
